@@ -42,7 +42,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .edition{display:flex;justify-content:space-between;width:100%;font-size:11px;color:var(--cream)}
 .title-wrap{display:flex;flex-direction:column;align-items:center;gap:8px;width:100%}
 .title{position:relative;font-family:var(--px);font-size:min(66px,7.45cqi);line-height:1.2;text-align:center;transform:skewX(-10.2deg);white-space:nowrap;margin:6px 0 10px}
-.title .back,.title .front{display:block}
+.title .back,.title .front{display:block}.title .pre{display:block;font-size:.42em;line-height:1.3;margin-bottom:.3em;letter-spacing:.04em}
 .title .back{position:absolute;inset:0;color:#c42000;transform:translate(.045em,.045em);
   text-shadow:.045em .045em 0 #7a0000,.09em .09em 0 #3b0000,.135em .135em 0 #1a0000}
 .title .front{position:relative;background:linear-gradient(180deg,#ff2312 0%,#ff8c0a 42%,#ffe75a 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
