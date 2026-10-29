@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Video-game Tournament! · Smash Bros. & Mario Kart</title>
+<meta name="description" content="Smash Bros. & Mario Kart tournament hosted by the Second Class Petty Officer Committee. Free entry, all skill levels. Add your name and pick your game.">
+<meta name="theme-color" content="#04040c">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Video-game Tournament! · Smash Bros. & Mario Kart">
+<meta property="og:description" content="Free entry. All skill levels. Secret loot for the top finishers. Tap to enter the tournament.">
+<meta property="og:image" content="https://tpqghsroatbplixgwnrr.supabase.co/storage/v1/object/public/site/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tpqghsroatbplixgwnrr.supabase.co/storage/v1/object/public/site/og.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%2304040c'/%3E%3Cpath d='M5 3h2v2h2v2h2v2H9v2H7v2H5z' fill='%23ff2a2a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://tpqghsroatbplixgwnrr.supabase.co">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Bebas+Neue&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+<div class="toast" id="toast" role="status" aria-live="polite"><span class="k">★ A NEW CHALLENGER HAS ENTERED ★</span><span class="nm" id="toastName"></span></div>
+
+<div class="tv-banner" aria-hidden="true"><span class="t">VIDEO-GAME TOURNAMENT!</span><span class="s">● LIVE BRACKET</span></div>
+
+<!-- ============ POSTER ENTRANCE ============ -->
+<header class="poster" aria-label="Event poster">
+  <div class="wrap">
+    <div class="imprint px"><span class="l">FRIENDLY COMPETITION. SERIOUSLY GOOD COMPANY.</span><span class="r">ALL SKILL LEVELS</span></div>
+    <div class="cabinet">
+      <div class="edge"></div>
+      <div class="surfaces">
+        <div class="tv" id="tv">
+          <i class="pstar" style="left:6%;top:31%"></i><i class="pstar" style="left:92%;top:22%;animation-delay:-1s"></i>
+          <i class="pstar" style="left:13%;top:76%;animation-delay:-2s"></i><i class="pstar" style="left:88%;top:69%;animation-delay:-.5s"></i>
+          <i class="pstar" style="left:41%;top:94%;animation-delay:-1.6s"></i>
+          <div class="tv-content">
+            <div class="edition px"><span>FREE PLAY</span><span>GAME NIGHT</span></div>
+            <div class="title-wrap">
+              <h1 class="title"><span class="back" aria-hidden="true">Video-game<br>Tournament!</span><span class="front">Video-game<br>Tournament!</span></h1>
+              <div class="byline vt"><img src="https://tpqghsroatbplixgwnrr.supabase.co/storage/v1/object/public/site/badge.png" alt="" width="24" height="27"><span>presented by SCPOA</span></div>
+            </div>
+            <p class="tv-sub px">SMASH BROS. &amp; MARIO KART <br>TOURNAMENT</p>
+            <p class="tv-tag vt">Good games. Great company.</p>
+          </div>
+        </div>
+        <a class="door" href="#join" aria-label="Event details. Tap to enter the tournament">
+          <span class="panel">
+          <span class="k px">NEXT ROUND</span>
+          <span class="details">
+            <span class="row"><span class="k px">DATE</span><span class="v" data-bind="date">Date TBD</span></span>
+            <span class="row"><span class="k px">TIME</span><span class="v" data-bind="time">Time TBD</span></span>
+            <span class="row"><span class="k px">PLACE</span><span class="v" data-bind="place">Location TBD</span></span>
+          </span>
+          <span class="nocoins px">NO COINS.<br>JUST COMPANY.</span>
+          </span>
+        </a>
+      </div>
+      <div class="teaser">
+        <span class="k px">SECRET <br>LOOT</span>
+        <p>Prizes for the top finishers. What they are stays a secret until game night.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="handoff" aria-label="Sign up invitation">
+  <div class="wrap"><div class="inner">
+    <div class="inv">
+      <p class="yt px">YOUR TURN</p>
+      <h2>ONE GAME. OR BOTH.</h2>
+      <p class="copy">Smash Bros., Mario Kart, or make it a double. All skill levels welcome.</p>
+    </div>
+    <div class="act">
+      <a class="arcade-btn tex" href="#join" id="enterBtn">ENTER THE TOURNAMENT!</a>
+      <p class="note">Continue to signup → Add your name &amp; choose your game(s).</p>
+    </div>
+  </div></div>
+</section>
+
+<main>
+  <!-- 01 JOIN -->
+  <section class="sec" id="join" aria-labelledby="joinH">
+    <div class="wrap">
+      <div class="countdown" id="countdown">
+        <div class="cd-head"><span class="k px">TIME TO JOIN</span><span class="s live" id="cdStatus">Signups open</span></div>
+        <div class="cd-boxes">
+          <div class="cd-u panel"><span class="n" id="cdD">--</span><span class="l">DAYS</span></div>
+          <div class="cd-u panel"><span class="n" id="cdH">--</span><span class="l">HRS</span></div>
+          <div class="cd-u panel"><span class="n" id="cdM">--</span><span class="l">MIN</span></div>
+          <div class="cd-u panel"><span class="n" id="cdS">--</span><span class="l">SEC</span></div>
+        </div>
+        <p class="cd-foot" id="closesLabel">Signups close: date TBD</p>
+      </div>
+
+      <div class="sh"><span class="n px">01</span><h2 id="joinH">JOIN THE GAME</h2><span class="rule"></span></div>
+      <div class="join">
+        <div class="invite">
+          <h3><span class="m">YOUR NEXT ROUND<br>STARTS HERE.</span><span class="d">YOUR NEXT<br>GREAT RIVAL<br>IS A FRIEND.</span></h3>
+          <p>A little friendly competition. A lot of cheering each other on. All skill levels have a place here.</p>
+          <ol class="steps"><li><span>01</span>Drop your name.</li><li><span>02</span>Choose your game(s).</li><li><span>03</span>Show up. Have fun.</li></ol>
+          <div class="bar"></div>
+        </div>
+
+        <div class="form-card panel" id="formCard">
+          <form id="form" novalidate>
+            <div style="display:flex;flex-direction:column;gap:28px">
+              <div class="field">
+                <label for="name">FULL NAME</label>
+                <input id="name" name="name" type="text" autocomplete="name" autocapitalize="words" placeholder="First Last" maxlength="60" required>
+                <p class="help">The name your friends will see on the board.</p>
+              </div>
+              <fieldset class="picker" style="border:0">
+                <legend class="k">PICK YOUR GAME(S)</legend>
+                <p class="sub">Choose one. Or make it a double.</p>
+                <div class="games">
+                  <label class="gcard"><input type="checkbox" id="gSmash"><span class="box">
+                    <span class="hd"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" x2="10" y1="11" y2="11"/><line x1="8" x2="8" y1="9" y2="13"/><line x1="15" x2="15.01" y1="12" y2="12"/><line x1="18" x2="18.01" y1="10" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></svg>
+                      <span class="sel"><svg viewBox="0 0 24 24" fill="none" stroke="#04040c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span></span>
+                    <span><span class="t" style="display:block">SMASH BROS.</span><span class="d" style="display:block">1v1 bracket</span></span>
+                  </span></label>
+                  <label class="gcard"><input type="checkbox" id="gKart"><span class="box">
+                    <span class="hd"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></svg>
+                      <span class="sel"><svg viewBox="0 0 24 24" fill="none" stroke="#04040c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span></span>
+                    <span><span class="t" style="display:block">MARIO KART</span><span class="d" style="display:block">4-player heats</span></span>
+                  </span></label>
+                </div>
+              </fieldset>
+              <div class="alert" id="alert" role="alert"></div>
+              <div class="form-action">
+                <button class="arcade-btn" id="submit" type="submit">ENTER THE TOURNAMENT!</button>
+                <p class="small">No coins, no pressure. Just a good night.</p>
+              </div>
+            </div>
+          </form>
+
+          <div class="state" id="success" hidden>
+            <div class="mini-title" aria-hidden="true">PRESS START</div>
+            <p class="k px">REGISTRATION COMPLETE</p>
+            <div class="sym ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <p class="big">YOU’RE IN!</p>
+            <p class="lead" id="successText"></p>
+            <p class="sub2">Your spot is saved. See you on game night!</p>
+            <button class="ghost-btn" id="again" type="button">SIGN UP SOMEONE ELSE</button>
+          </div>
+
+          <div class="state" id="closed" hidden>
+            <div class="mini-title" aria-hidden="true">PRESS START</div>
+            <p class="k px">NEXT UP: GAME NIGHT</p>
+            <div class="sym lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="16" r="1"/><rect x="3" y="10" width="18" height="12" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg></div>
+            <p class="big">SIGNUPS<br>CLOSED</p>
+            <p class="lead">The bracket is locked in.</p>
+            <p class="sub2">The names are in. The matchups are set. Come cheer on your friends.</p>
+            <div class="redrule"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 PLAYERS -->
+  <section class="sec" id="players" aria-labelledby="plH">
+    <div class="wrap">
+      <div class="sh"><span class="n px">02</span><h2 id="plH">PLAYERS</h2><span class="rule"></span></div>
+      <div class="counts">
+        <div class="count smash panel"><span class="l">SMASH</span><span class="n" id="nSmash">00</span></div>
+        <div class="count kart panel"><span class="l">KART</span><span class="n" id="nKart">00</span></div>
+      </div>
+      <div class="panel" id="board">
+        <div class="board-head"><span class="no">NO.</span><span class="pl">PLAYER</span><span class="gm">GAME(S)</span></div>
+        <div id="rows"><div class="board-empty"><span class="px">LOADING…</span></div></div>
+      </div>
+      <p class="board-note">Listed in signup order, not skill order. Updates live.</p>
+    </div>
+  </section>
+
+  <!-- 03 BRACKET -->
+  <section class="sec" id="bracket" aria-labelledby="brH">
+    <div class="wrap">
+      <div class="sh"><span class="n px">03</span><h2 id="brH">THE BRACKET</h2><span class="rule"></span></div>
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" id="tabSmash" aria-selected="true">SMASH BROS.</button>
+        <button class="tab" role="tab" id="tabKart" aria-selected="false">MARIO KART</button>
+      </div>
+      <div class="bdesc"><span class="t" id="bdescT">Single elimination · 1v1</span><span class="s" id="bdescS">PREVIEW</span></div>
+      <div class="champ" id="champ"><span class="cup" aria-hidden="true">★</span><div><p class="k" id="champK">CHAMPION</p><p class="nm" id="champName"></p><p class="podium" id="champPodium"></p></div></div>
+      <div class="bview" id="bview"><div class="rounds" id="rounds"></div></div>
+      <p class="scroll-cue" id="scrollCue" hidden>MORE ROUNDS TO THE RIGHT &gt;&gt;</p>
+      <div class="locked panel" id="lockedNote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="16" r="1"/><rect x="3" y="10" width="18" height="12" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg><span id="lockedText">The bracket fills itself in when signups close. Until then, matchups shuffle as players join.</span></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap" style="display:flex;flex-direction:column;align-items:center;gap:24px">
+    <div class="rule"></div>
+    <p class="gl px">GOOD LUCK · HAVE FUN</p>
+    <p class="h">Hosted by the Second Class Petty Officer Committee.</p>
+    <div class="trim" aria-hidden="true"><i style="background:var(--r1)"></i><i style="background:var(--r2)"></i><i style="background:var(--r3)"></i><i style="background:var(--r4)"></i><i style="background:var(--r5)"></i><i style="background:var(--r6)"></i><i style="background:var(--r7)"></i><i style="background:var(--r8)"></i></div>
+    <button class="hostlink" id="hostLink" type="button">HOST</button>
+  </div>
+</footer>
+
+<div class="hostbar" role="region" aria-label="Host controls">
+  <span class="k">HOST</span>
+  <span class="t" id="hostHint">Tap a player to mark the winner. Kart: tap 1st, then 2nd.</span>
+  <a href="?tv" target="_blank" rel="noopener">TV</a>
+  <button type="button" id="hostExit">EXIT</button>
+</div>
+
+<dialog id="pinDlg">
+  <form method="dialog" id="pinForm">
+    <h3>HOST LOGIN</h3>
+    <p>Enter the organizer PIN to score matches on game night.</p>
+    <input id="pin" inputmode="numeric" autocomplete="one-time-code" maxlength="12" aria-label="Organizer PIN">
+    <p class="err" id="pinErr"></p>
+    <div class="row"><button type="button" class="ghost-btn" id="pinCancel" style="min-height:52px">CANCEL</button><button class="arcade-btn" id="pinGo" style="min-height:52px">START</button></div>
+  </form>
+</dialog>
+
+<script src="app.js?v=2"></script>
+</body>
+</html>
